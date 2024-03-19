@@ -1,5 +1,3 @@
-const { response } = require('../../server');
-
 const User = require('mongoose').model('User');
 
 exports.create = async function (req, res){
@@ -9,7 +7,7 @@ exports.create = async function (req, res){
         console.log('Value of response: ${response}');
         res.status(200).send("User Added");
     })
-    .catch((error) =>{
+    .catch((error) => {
         console.error('Could not save user: ${error}');
     });
 };
